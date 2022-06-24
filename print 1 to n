@@ -1,0 +1,12 @@
+void print1toN(intn)
+{
+if(n==0)
+return;
+print1toN;
+cout<<n<<"";
+}
+int main()
+{
+int n=4;
+print1toN(n);
+return 0;
