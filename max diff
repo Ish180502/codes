@@ -1,0 +1,10 @@
+int maxdiff(int arr[],int n)
+{
+int res=arr[1]-arr[0];
+int minval = arr[0];
+for(int j=1;j<n;j++)
+res=max(res,arr[j]-minval);
+minval=min(minval,arr[j]);
+}
+return result;
+}
