@@ -1,0 +1,23 @@
+ int normalmaxsum(int arr[],int n)
+{
+int res = arr[0], maxending=arr[0];
+for(int i =1;i<n;i++)
+{
+maxending=max(arr[i],maxending+arr[i]);
+res =max(res,maxending);
+}return res;
+}
+int overallmaxsum(int arr[],int n)
+{
+int max_normal=normalmaxsum(arr,n);
+if(max_normal<0)
+return max_normal;
+
+intarr_sum=0;
+for(int=0;i<n;i++)
+{
+arr_sum+=arr[i];
+arr[i]=-arr[i];
+}
+int max_circular=arr_sum+normalmaxsum(arr,n);
+return max(max_normal,max_circular);
