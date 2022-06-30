@@ -10,5 +10,5 @@ curr=curr+arr[i];
 res=max(res,curr);
 }
 }
-return rse;
+return res;
 }
